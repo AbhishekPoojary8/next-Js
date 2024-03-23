@@ -166,7 +166,7 @@ const Hobbies = () => {
                         style={{ opacity, transition: "opacity 2s ease" }}
                       >
                         {" "}
-                        "{texts[index].quotes}"
+                        {`"{${texts[index].quotes}}"`}
                       </Typography>
                     </CardContent>
                   </Card>

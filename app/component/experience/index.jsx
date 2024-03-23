@@ -59,7 +59,12 @@ const OverAllQualification = () => {
                   <>
                     {qual?.info?.map((qualification) => {
                       return (
-                        <Grid xs={12} item className="mt-6 mb-1">
+                        <Grid
+                          key={qualification.mainTitle}
+                          xs={12}
+                          item
+                          className="mt-6 mb-1"
+                        >
                           <span
                             className="rounded-3xl border border-blue-500 border-10 py-1 px-5 text-gray-600 text-sm font-medium mr-4"
                             style={{ border: "3px solid #2fa1f4" }}
