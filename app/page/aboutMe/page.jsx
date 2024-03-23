@@ -17,11 +17,10 @@ import LinearProgress, {
 import { CustomSpeedDial } from "../../component/speedDail/SppedDail";
 import { styled } from "@mui/material/styles";
 
-const AboutMe = ({ children }) => {
+const AboutMe = () => {
   let { aboutMePageContent, aboutMeLayout, SliderImages, FunFactsAboutMe } =
     aboutMeContent;
   let { LibButton } = libComponent;
-  console.log(children, "children");
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 4,
     borderRadius: 5,
