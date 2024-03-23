@@ -3,7 +3,8 @@ import StorageIcon from '@mui/icons-material/Storage';
 import ErrorIcon from '@mui/icons-material/Error';
 import BugReportIcon from '@mui/icons-material/BugReport';
 // import Html5 from "../assest/Technology/Html5";
-import Html5 from "../assest/Technology/Html5.jpg";
+// import Html5 from "../assest/Technology/Html5.jpg";
+// import Html5 from "../assest/Technology/"
 import CSS5 from "../assest/Technology/CSS5.jpg";
 import NestJs from "../assest/Technology/NestJs.png"
 import CSS from "../assest/Technology/CSS.png";
@@ -11,7 +12,7 @@ import CSS from "../assest/Technology/CSS.png";
 import ReactJs from "../assest/Technology/ReactJs.jpg";
 import Node from "../assest/Technology/Node.png";
 import Jira from "../assest/Technology/Jira.jpg";
-import TailWind from "../assest/Technology/TailWindCss.png";
+// import TailWind from "../assest/Technology/TailWindCss.png";
 import GraphQl from "../assest/Technology/GraphQl.png";
 import MySql from "../assest/Technology/MySql.png";
 import TypeOrm from "../assest/Technology/TypeOrm.png";
@@ -53,7 +54,7 @@ const aboutMeLayout =[{
 ]
 const SliderImages = [
   {
-    imageUrl: Html5,
+    imageUrl: CSS5,
     title:"HTML5",
     description: 'Standard markup language for creating web pages and web applications.',
     link:"https://www.w3schools.com/html/"
@@ -119,7 +120,7 @@ const SliderImages = [
     link:"https://confluence.atlassian.com/jira"
   },
   {
-    imageUrl: TailWind,
+    imageUrl: CSS5,
     title:"TailWind Css",
     description: 'Utility-first CSS framework for creating custom designs without having to leave your HTML.',
     link:"https://tailwindcss.com/docs/installation"

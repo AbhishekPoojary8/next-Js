@@ -1,7 +1,8 @@
 "use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./component/header/header";
+// import Header from "./component/header/header";
+import Header from "./component/header/Header";
 import { RecoilRoot } from "recoil";
 import Footer from "./component/footer/Footer";
 
