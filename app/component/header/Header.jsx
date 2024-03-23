@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import RightMenu from "@/app/component/menuBar/RightMenu";
 import { useRecoilState } from "recoil";
 import pagePrimaryColor from "../../state-handlers/Recoil/selectors/page";
-import { pageState } from "../../state-handlers/Recoil/atoms/page";
+import { pageState } from "../../state-handlers/Recoil/atoms/pageState";
 // import pageState from "../../state-handlers/Recoil/atoms/page";
 import { targetPage } from "../../utils/page_handlers/currentPage";
 import { useCallback, useEffect, useMemo } from "react";

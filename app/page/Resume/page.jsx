@@ -4,7 +4,7 @@ import { useRecoilState } from "recoil";
 import OverAllQualification from "../../component/experience/index";
 import { Box, Grid } from "@mui/material";
 import PageTitle from "../../component/title/index";
-import { pageState } from "../../state-handlers/Recoil/atoms/page";
+import { pageState } from "../../state-handlers/Recoil/atoms/pageState";
 import Hobbies from "../../component/hobbies/index";
 import WhatIDo from "../aboutMe/whatIDo";
 import LinearProgress, {

@@ -5,7 +5,7 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 import { styled } from "@mui/material/styles";
-import { pageState } from "../../state-handlers/Recoil/atoms/page";
+import { pageState } from "../../state-handlers/Recoil/atoms/pageState";
 import { useRecoilState } from "recoil";
 import { PageConfigutaion } from "../../customHooks/pageConfiguration";
 

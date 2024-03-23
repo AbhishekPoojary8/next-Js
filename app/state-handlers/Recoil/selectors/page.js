@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { pageState } from "../atoms/page";
+import { pageState } from "../atoms/pageState";
 const pagePrimaryColor = selector({
     key:"pagePrimaryColor",
     get:({get})=>{
