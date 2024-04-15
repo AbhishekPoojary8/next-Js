@@ -257,7 +257,7 @@ export default Counter;
           <ul>
             <li>Allows functional components to manage state.</li>
             <li>Returns a stateful value and a function to update it.</li>
-            <li>Here's an example:</li>
+            <li>Here&apos;s an example:</li>
           </ul>
         </Typography>
         <Typography
@@ -288,7 +288,7 @@ export default Counter;
               componentWillUnmount lifecycle methods combined. Runs after every
               render by default.
             </li>
-            <li>Here's an example:</li>
+            <li>Here&apos;s an example:</li>
           </ul>
         </Typography>
 
@@ -319,7 +319,7 @@ export default Counter;
               Takes a context object created by React.createContext() as an
               argument.
             </li>
-            <li>Here's an example:</li>
+            <li>Here&apos;s an example:</li>
           </ul>
         </Typography>
         <Typography
@@ -348,7 +348,7 @@ export default Counter;
               Accepts a reducer function and initial state, returns the current
               state and a dispatch function to update it.
             </li>
-            <li>Here's an example:</li>
+            <li>Here&apos;s an example:</li>
           </ul>
         </Typography>
         <Typography
