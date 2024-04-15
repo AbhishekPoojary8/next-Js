@@ -36,6 +36,100 @@ const BlogContent = () => {
     };
     
     export default ReusableComponent;`;
+
+  const useStateCode = `import React, { useState } from 'react';
+
+    const Counter = () => {
+      const [count, setCount] = useState(0);
+    
+      return (
+        <div>
+          <p>Count: {count}</p>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+      );
+    };
+    
+    export default Counter;
+    `;
+
+  const useEffectCode = `
+    import React, { useState, useEffect } from 'react';
+
+const DataFetcher = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  return (
+    <div>
+      {data ? (
+        <ul>
+          {data.map(item => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
+};
+
+export default DataFetcher;
+`;
+
+  const useContextCode = `import React, { useContext } from 'react';
+import ThemeContext from './ThemeContext';
+
+const ThemedButton = () => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <button style={{ background: theme.background, color: theme.color }}>
+      Themed Button
+    </button>
+  );
+};
+
+export default ThemedButton;
+`;
+
+  const useReducerCode = `
+import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+};
+
+const Counter = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+`;
   return (
     <>
       <Box className="p-[8%]">
@@ -129,7 +223,7 @@ const BlogContent = () => {
           Re-usable Component
         </Typography>
         <Typography>
-          To create a reusable React component in Next.js, you can define a
+          To create a reusable React component in React.js, you can define a
           functional component that accepts props and renders content based on
           those props.
         </Typography>
@@ -147,6 +241,146 @@ const BlogContent = () => {
             </DynamicSyntaxHighlighter>
           )}
         </Typography>
+        <Typography variant="h5" className="my-4 text-black font-extrabold	">
+          Rect Hooks
+        </Typography>
+        <Typography className="leading-8">
+          React hooks are functions that let you use state and other React
+          features in functional components instead of class components. They
+          were introduced in React 16.8 and provide a simpler and more concise
+          way to manage state and side effects in your components.
+        </Typography>
+        <Typography variant="h6" className="my-2 text-black font-extrabold	">
+          Use State Hook:
+        </Typography>
+        <Typography className="leading-8">
+          <ul>
+            <li>Allows functional components to manage state.</li>
+            <li>Returns a stateful value and a function to update it.</li>
+            <li>Here's an example:</li>
+          </ul>
+        </Typography>
+        <Typography
+          className="text-black font-bold my-4"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {isClient && (
+            <DynamicSyntaxHighlighter
+              className="text-black "
+              language="javascript"
+              style={dark}
+            >
+              {useStateCode}
+            </DynamicSyntaxHighlighter>
+          )}
+        </Typography>
+        <Typography variant="h6" className="my-2 text-black font-extrabold	">
+          Use Effect Hook:
+        </Typography>
+        <Typography className="leading-8">
+          <ul>
+            <li>
+              Allows performing side effects in functional components (e.g.,
+              data fetching, subscriptions, DOM manipulations).
+            </li>
+            <li>
+              Similar to componentDidMount, componentDidUpdate, and
+              componentWillUnmount lifecycle methods combined. Runs after every
+              render by default.
+            </li>
+            <li>Here's an example:</li>
+          </ul>
+        </Typography>
+
+        <Typography
+          className="text-black font-bold my-4"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {isClient && (
+            <DynamicSyntaxHighlighter
+              className="text-black "
+              language="javascript"
+              style={dark}
+            >
+              {useEffectCode}
+            </DynamicSyntaxHighlighter>
+          )}
+        </Typography>
+        <Typography variant="h6" className="my-2 text-black font-extrabold	">
+          useContext() Hook:
+        </Typography>
+        <Typography className="leading-8">
+          <ul>
+            <li>
+              Allows accessing the context (global state) in functional
+              components.
+            </li>
+            <li>
+              Takes a context object created by React.createContext() as an
+              argument.
+            </li>
+            <li>Here's an example:</li>
+          </ul>
+        </Typography>
+        <Typography
+          className="text-black font-bold my-4"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {isClient && (
+            <DynamicSyntaxHighlighter
+              className="text-black "
+              language="javascript"
+              style={dark}
+            >
+              {useContextCode}
+            </DynamicSyntaxHighlighter>
+          )}
+        </Typography>
+        <Typography variant="h6" className="my-2 text-black font-extrabold	">
+          useReducer() Hook:
+        </Typography>
+        <Typography className="leading-8">
+          <ul>
+            <li>
+              Alternative to useState() for managing more complex state logic.
+            </li>
+            <li>
+              Accepts a reducer function and initial state, returns the current
+              state and a dispatch function to update it.
+            </li>
+            <li>Here's an example:</li>
+          </ul>
+        </Typography>
+        <Typography
+          className="text-black font-bold my-4"
+          style={{ whiteSpace: "pre-line" }}
+        >
+          {isClient && (
+            <DynamicSyntaxHighlighter
+              className="text-black "
+              language="javascript"
+              style={dark}
+            >
+              {useReducerCode}
+            </DynamicSyntaxHighlighter>
+          )}
+        </Typography>
+        <Typography className="leading-8">
+          These are just a few examples of React hooks. There are several other
+          hooks like useCallback(), useMemo(), useRef(), etc., which serve
+          various purposes in React functional components.
+        </Typography>
+      </Box>
+      <Box style={{ display: "flex", justifyContent: "center" }}>
+        <div class="envelope">
+          <div class="back"></div>
+          <div class="letter">
+            <div class="text">Thanks For Reading !</div>
+          </div>
+          <div class="front"></div>
+          <div class="top"></div>
+          <div class="shadow"></div>
+        </div>
       </Box>
     </>
   );

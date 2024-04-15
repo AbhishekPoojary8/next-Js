@@ -41,7 +41,7 @@ const AboutMe = () => {
   }
 
   return (
-    <Grid container spacing={0} className="pt-[8%] pr-[8%] pl-[8%]">
+    <Grid container spacing={0} className="pt-[8%] pr-[2%] pl-[4%]">
       <Grid className="flex justify-center h-full " item md={5} sm={12}>
         <div
           className="flex items-center justify-center  
@@ -139,11 +139,13 @@ const AboutMe = () => {
       >
         {() => (
           <>
-            {FunFactsAboutMe.map((IndFunFact) => (
-              <Grid key={IndFunFact} item xs={12} sm={6} lg={3}>
-                <CardLayout IndFunFact={IndFunFact} />
-              </Grid>
-            ))}
+            <Grid container spacing={4}>
+              {FunFactsAboutMe.map((IndFunFact) => (
+                <Grid key={IndFunFact} item xs={12} sm={6} lg={3}>
+                  <CardLayout IndFunFact={IndFunFact} />
+                </Grid>
+              ))}
+            </Grid>
           </>
         )}
       </WhatIDo>
